@@ -1,0 +1,3 @@
+src/components/sections/ExperienceProfile.tsx(4,28): error TS6133: 'GraduationCap' is declared but its value is never read.
+src/components/sections/ExperienceProfile.tsx(99,42): error TS2304: Cannot find name 'Code2'.
+src/components/sections/TechCloud.tsx(4,1): error TS6133: 'StickerCard' is declared but its value is never read.
