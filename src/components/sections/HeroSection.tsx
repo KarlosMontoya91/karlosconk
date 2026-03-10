@@ -66,8 +66,7 @@ export const HeroSection = () => {
                     </h1>
 
                     <p ref={textRef} className="text-lg md:text-xl text-gray-400 mb-10 max-w-xl font-sans text-balance leading-relaxed">
-                        Soy Karlos Montoya, especializado en la creación y diseño de interfaces premium
-                        centradas en el usuario. Combinando ingeniería de sistemas con dirección de arte.
+                        Soy Karlos Montoya, me especializo en combinar diseño, código y visión de producto para crear interfaces que no solo se ven bien, sino que comunican valor, resuelven problemas y elevan la experiencia del usuario.
                     </p>
 
                     <div ref={ctaRef} className="flex flex-wrap items-center gap-6">

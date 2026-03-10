@@ -49,10 +49,10 @@ export const FinalCTA = () => {
                         </h2>
 
                         <p className="text-xl md:text-2xl text-dark/80 font-sans font-medium mb-10 max-w-2xl text-balance">
-                            Conversemos sobre cómo puedo aportar valor a tu equipo de desarrollo o diseño.
+                            Conversemos sobre cómo puedo aportar valor a tu proyecto o negocio.
                         </p>
 
-                        <MagneticButton size="lg" variant="secondary" onClick={() => window.open('mailto:karlosmontoya91@gmail.com', '_blank')}>
+                        <MagneticButton size="lg" variant="secondary" onClick={() => window.open('https://wa.me/528120344995', '_blank')}>
                             Hablemos ahora mismo
                         </MagneticButton>
                     </div>

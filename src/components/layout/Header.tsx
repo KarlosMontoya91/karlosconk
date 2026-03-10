@@ -34,8 +34,9 @@ export const Header = () => {
         >
             <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
                 <a href="#" className="flex items-center gap-2 group">
-                    <div className="w-10 h-10 rounded-xl bg-accent-mint flex items-center justify-center border-2 border-dark shadow-[2px_2px_0px_#000] group-hover:shadow-[4px_4px_0px_#000] group-hover:-translate-y-0.5 transition-all">
-                        <Code2 className="text-dark" size={24} strokeWidth={2.5} />
+                    <div className="w-20 h-8 flex items-center justify-center transition-all group-hover:-translate-y-0.5">
+                        {/* <Code2 className="text-dark" size={24} strokeWidth={2.5} /> */}
+                        <img src={`${import.meta.env.BASE_URL}KM_logo.png`} alt="Logo" className="w-20 h-8 drop-shadow-[2px_2px_0px_rgba(0,0,0,1)] group-hover:drop-shadow-[4px_4px_0px_rgba(0,0,0,1)] transition-all" />
                     </div>
                     <span className="font-display font-bold text-xl tracking-tight text-white hidden sm:block">
                         Karlos<span className="text-accent-mint">Montoya</span>
@@ -46,7 +47,7 @@ export const Header = () => {
                     <MagneticButton variant="secondary" size="sm" onClick={() => window.open('https://karlosmontoya91.github.io/Karlos_Montoya_CV/', '_blank')}>
                         Ver CV Original
                     </MagneticButton>
-                    <MagneticButton variant="primary" size="sm" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
+                    <MagneticButton variant="primary" size="sm" onClick={() => window.open('https://wa.me/528120344995', '_blank')}>
                         Contactar
                     </MagneticButton>
                 </div>

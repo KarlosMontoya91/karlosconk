@@ -57,12 +57,12 @@ export const ExperienceProfile = () => {
                             <div className="relative aspect-[3/4] rounded-[3rem] bg-gray-800 border-2 border-dark overflow-hidden shadow-[8px_8px_0px_#000]">
                                 {/* Fallback to simple Avatar or Graphic if Image unavailable */}
                                 <img
-                                    src="https://images.unsplash.com/photo-1549692520-acc6669e2f0c?q=80&w=800&auto=format&fit=crop"
+                                    src="public/yo.png"
                                     alt="Karlos Montoya"
                                     className="w-full h-full object-cover grayscale opacity-90 mix-blend-screen"
                                 />
                                 <div className="absolute bottom-6 left-6 right-6 bg-accent-coral p-4 rounded-2xl border-2 border-dark shadow-[4px_4px_0px_#000]">
-                                    <p className="font-bold text-dark text-lg leading-tight">Autor / Desarrollador</p>
+                                    <p className="font-bold text-dark text-lg leading-tight">Diseñador UX/UI & Desarrollador Frontend</p>
                                 </div>
                             </div>
                         </div>

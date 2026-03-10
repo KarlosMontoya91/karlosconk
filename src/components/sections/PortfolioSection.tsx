@@ -7,13 +7,15 @@ import { StickerCard } from '../ui/StickerCard';
 gsap.registerPlugin(ScrollTrigger);
 
 const portfolioItems = [
-    { name: 'Portafolio CV', desc: 'Versión original de presentación interactiva.', label: 'Portfolio' },
+    { name: 'Portafolio CV', desc: 'Portafolio web estilo CV interactivo.', label: 'Portfolio' },
     { name: 'RESERVIA', desc: 'Plataforma de reservaciones y búsqueda de alojamientos.', label: 'Web App' },
-    { name: 'CGI-Industrial', desc: 'Sitio corporativo industrial premium.', label: 'Corporativo' },
-    { name: 'SupplyHub', desc: 'Panel de administración y logística.', label: 'Dashboard' },
-    { name: 'App de ahorro', desc: 'Aplicación mobile first de finanzas.', label: 'Mobile' },
+    { name: 'CGI-Industrial', desc: 'Sitio corporativo industrial premium.', label: 'Web Corporativa' },
+    { name: 'SupplyHub', desc: 'Panel de administración y logística.', label: 'Prototipo' },
+    { name: 'App de ahorro', desc: 'Aplicación mobile first de finanzas.', label: 'Web App' },
     { name: 'Control de Gastos', desc: 'Tracker financiero con presupuesto.', label: 'Herramienta' },
-    { name: 'Temoctzin', desc: 'Catálogo de Closets y Cocinas a medida.', label: 'Catálogo' }
+    { name: 'Temoctzin', desc: 'Catálogo de Closets y Cocinas a medida.', label: 'Catálogo' },
+    { name: 'CruzFire', desc: 'Sitio web enfocado en la venta y mantenimiento de extintores.', label: 'Sitio Web' },
+    { name: 'JHI Hidraulica', desc: 'Sitio web enfocado en la venta y reparación de equipos hidraulicos.', label: 'Sitio Web' }
 ];
 
 export const PortfolioSection = () => {
