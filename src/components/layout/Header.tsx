@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { MagneticButton } from '../ui/MagneticButton';
-import { Code2 } from 'lucide-react';
 
 export const Header = () => {
     const headerRef = useRef<HTMLElement>(null);
