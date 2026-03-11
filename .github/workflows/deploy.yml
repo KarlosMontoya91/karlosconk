@@ -3,7 +3,7 @@ name: Deploy KarlosconK
 on:
   push:
     branches:
-      - main ## rama development
+      - main ## rama developmen
 
 jobs:
   build-and-deploy:
