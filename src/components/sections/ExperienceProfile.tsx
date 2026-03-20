@@ -57,7 +57,7 @@ export const ExperienceProfile = () => {
                             <div className="relative aspect-[3/4] rounded-[3rem] bg-gray-800 border-2 border-dark overflow-hidden shadow-[8px_8px_0px_#000]">
                                 {/* Fallback to simple Avatar or Graphic if Image unavailable */}
                                 <img
-                                    src="yo.png"
+                                    src={`${import.meta.env.BASE_URL}yo.png`}
                                     alt="Karlos Montoya"
                                     className="w-full h-full object-cover grayscale opacity-90 mix-blend-screen"
                                 />

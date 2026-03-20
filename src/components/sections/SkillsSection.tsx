@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { StickerCard } from '../ui/StickerCard';
-import { Layers, MousePointer2, Code2, PaintBucket } from 'lucide-react';
+import { Layers, MousePointer2, Code2, PaintBucket, ArrowUpRight } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -44,17 +44,17 @@ export const SkillsSection = () => {
 
         gsap.fromTo(
             cards,
-            { y: 150, opacity: 0, rotation: 5 },
+            { y: 50, opacity: 0, scale: 0.98 },
             {
                 y: 0,
                 opacity: 1,
-                rotation: 0,
-                duration: 1,
-                stagger: 0.15,
-                ease: 'power3.out',
+                scale: 1,
+                duration: 0.6,
+                stagger: 0.1,
+                ease: 'power2.out',
                 scrollTrigger: {
                     trigger: sectionRef.current,
-                    start: 'top 75%',
+                    start: 'top 80%',
                 }
             }
         );
@@ -72,22 +72,41 @@ export const SkillsSection = () => {
                     </p>
                 </div>
 
-                <div ref={gridRef} className="grid md:grid-cols-2 gap-8 lg:gap-12">
+                <div ref={gridRef} className="flex flex-col gap-6 relative">
+                    {/* Timeline decoration */}
+                    <div className="hidden md:block absolute left-8 top-10 bottom-10 w-1 bg-gray-800 rounded-full z-0"></div>
+
                     {skills.map((skill, i) => (
                         <StickerCard
                             key={i}
-                            color={skill.color}
-                            className={`p-10 flex flex-col gap-6 ${i % 2 !== 0 ? 'md:mt-16' : ''}`}
+                            color="card"
+                            variant="outline"
+                            className="group cursor-none border-gray-800 hover:border-accent-sky hover:bg-gray-900/50 backdrop-blur-sm transition-colors z-10"
+                            hoverEffect={false}
                         >
-                            <div className="w-16 h-16 rounded-full bg-dark/10 flex items-center justify-center mb-4">
-                                <skill.icon size={32} className="text-dark" strokeWidth={2} />
+                            <div className="p-6 md:p-8 flex flex-col md:flex-row items-center gap-6">
+                                {/* Number / Node */}
+                                <div className="hidden md:flex shrink-0 w-16 h-16 rounded-full bg-dark border-2 border-gray-700 items-center justify-center group-hover:bg-accent-sky group-hover:border-dark transition-all">
+                                    <skill.icon size={28} className="text-gray-400 group-hover:text-dark transition-colors" strokeWidth={1.5} />
+                                </div>
+
+                                <div className="flex-1 w-full text-center md:text-left">
+                                    <div className="flex flex-col md:flex-row md:items-center gap-3 mb-2">
+                                        <h3 className="font-display font-bold text-2xl tracking-tight text-white group-hover:text-accent-sky transition-colors">
+                                            {skill.title}
+                                        </h3>
+                                    </div>
+                                    <p className="text-gray-400 text-lg font-sans">
+                                        {skill.description}
+                                    </p>
+                                </div>
+
+                                <div className="shrink-0">
+                                    <div className="w-12 h-12 rounded-full border-2 border-gray-700 group-hover:border-accent-sky group-hover:bg-accent-sky flex items-center justify-center transition-all bg-dark shadow-sm">
+                                        <ArrowUpRight className="text-gray-400 group-hover:text-dark transition-colors" />
+                                    </div>
+                                </div>
                             </div>
-                            <h3 className="font-display font-bold text-3xl leading-tight">
-                                {skill.title}
-                            </h3>
-                            <p className="text-lg font-medium opacity-80 leading-relaxed font-sans">
-                                {skill.description}
-                            </p>
                         </StickerCard>
                     ))}
                 </div>

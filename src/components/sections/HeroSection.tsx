@@ -70,9 +70,11 @@ export const HeroSection = () => {
                     </p>
 
                     <div ref={ctaRef} className="flex flex-wrap items-center gap-6">
-                        <MagneticButton size="lg" variant="primary">
-                            Ver Portafolio
-                        </MagneticButton>
+                        <a href="https://karlosmontoya91.github.io/Karlos_Montoya_CV/" target="_blank" rel="noopener noreferrer">
+                            <MagneticButton size="lg" variant="primary">
+                                Ver Portafolio
+                            </MagneticButton>
+                        </a>
                         <div className="flex -space-x-3">
                             {[1, 2, 3].map((i) => (
                                 <div key={i} className="w-12 h-12 rounded-full border-2 border-dark bg-gray-800 flex items-center justify-center relative overflow-hidden">
