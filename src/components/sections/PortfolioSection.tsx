@@ -109,7 +109,7 @@ export const PortfolioSection = () => {
                                 {/* Top Header */}
                                 <div className="flex justify-between items-start mb-6">
                                     <div className="flex flex-col gap-2">
-                                        <span className={`inline-block px-3 py-1 ${item.color === 'dark' ? 'bg-white/10 text-white' : 'bg-white/30 text-dark'} rounded-full text-xs font-bold uppercase tracking-wider w-fit`}>
+                                        <span className="inline-block px-3 py-1 bg-white/30 text-dark rounded-full text-xs font-bold uppercase tracking-wider w-fit">
                                             {item.label}
                                         </span>
                                         <p className="font-sans font-medium opacity-80 text-sm">{item.role}</p>
