@@ -46,7 +46,7 @@ export const Header = () => {
                     <MagneticButton variant="secondary" size="sm" onClick={() => window.open('https://karlosmontoya91.github.io/Karlos_Montoya_CV/', '_blank')}>
                         Ver CV Original
                     </MagneticButton>
-                    <MagneticButton variant="primary" size="sm" onClick={() => window.open('https://wa.me/528120344995', '_blank')}>
+                    <MagneticButton variant="primary" size="sm" onClick={() => window.open('https://wa.me/528132765166', '_blank')}>
                         Contactar
                     </MagneticButton>
                 </div>
