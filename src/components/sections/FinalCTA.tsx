@@ -45,14 +45,14 @@ export const FinalCTA = () => {
                         </div>
 
                         <h2 className="font-display font-bold text-5xl md:text-7xl text-dark mb-6 leading-[0.9] tracking-tight text-balance">
-                            ¿Listo para dar el siguiente paso?
+                            El siguiente gran paso comienza aquí.
                         </h2>
 
                         <p className="text-xl md:text-2xl text-dark/80 font-sans font-medium mb-10 max-w-2xl text-balance">
                             Conversemos sobre cómo puedo aportar valor a tu proyecto o negocio.
                         </p>
 
-                        <MagneticButton size="lg" variant="secondary" onClick={() => window.open('https://wa.me/528120344995', '_blank')}>
+                        <MagneticButton size="lg" variant="secondary" onClick={() => window.open('https://wa.me/528132765166', '_blank')}>
                             Hablemos ahora mismo
                         </MagneticButton>
                     </div>

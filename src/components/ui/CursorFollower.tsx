@@ -105,7 +105,7 @@ export const CursorFollower = () => {
     return (
         <div
             ref={cursorRef}
-            className="fixed top-0 left-0 w-5 h-5 rounded-full bg-accent-coral pointer-events-none z-[9999] opacity-0 mix-blend-difference hidden md:block"
+            className="custom-cursor-follower fixed top-0 left-0 w-5 h-5 rounded-full bg-accent-coral pointer-events-none z-[9999] opacity-0 mix-blend-difference hidden md:block"
             style={{ willChange: 'transform' }}
         />
     );

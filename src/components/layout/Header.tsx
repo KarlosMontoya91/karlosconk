@@ -2,7 +2,11 @@ import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { MagneticButton } from '../ui/MagneticButton';
 
-export const Header = () => {
+interface HeaderProps {
+    onOpenCV: () => void;
+}
+
+export const Header = ({ onOpenCV }: HeaderProps) => {
     const headerRef = useRef<HTMLElement>(null);
     const [isScrolled, setIsScrolled] = useState(false);
 
@@ -43,7 +47,7 @@ export const Header = () => {
                 </a>
 
                 <div className="flex items-center gap-4">
-                    <MagneticButton variant="secondary" size="sm" onClick={() => window.open('https://karlosmontoya91.github.io/Karlos_Montoya_CV/', '_blank')}>
+                    <MagneticButton variant="secondary" size="sm" onClick={onOpenCV}>
                         Ver CV Original
                     </MagneticButton>
                     <MagneticButton variant="primary" size="sm" onClick={() => window.open('https://wa.me/528132765166', '_blank')}>

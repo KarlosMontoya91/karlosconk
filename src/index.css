@@ -25,3 +25,18 @@
     cursor: none;
   }
 }
+
+/* Ocultar el cursor personalizado cuando se pasa el mouse por encima del visualizador del PDF */
+body.hide-custom-cursor .custom-cursor-follower {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+@media (pointer: fine) {
+  body.hide-custom-cursor,
+  body.hide-custom-cursor a,
+  body.hide-custom-cursor button,
+  body.hide-custom-cursor [role="button"] {
+    cursor: auto !important;
+  }
+}
