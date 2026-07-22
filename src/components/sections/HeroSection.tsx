@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { MagneticButton } from '../ui/MagneticButton';
 import { Sparkles, Figma, Code, Palette, Laptop } from 'lucide-react';
+import { useViewMode } from '../../context/ViewModeContext';
 
 export const HeroSection = () => {
     const sectionRef = useRef<HTMLElement>(null);
@@ -10,6 +11,8 @@ export const HeroSection = () => {
     const textRef = useRef<HTMLParagraphElement>(null);
     const ctaRef = useRef<HTMLDivElement>(null);
     const badgesRef = useRef<HTMLDivElement>(null);
+
+    const { mode } = useViewMode();
 
     // Floating animation for badges
     useEffect(() => {
@@ -46,6 +49,10 @@ export const HeroSection = () => {
 
     }, []);
 
+    const handleScrollTo = (id: string) => {
+        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    };
+
     return (
         <section
             ref={sectionRef}
@@ -60,22 +67,52 @@ export const HeroSection = () => {
                         <span>Disponible para nuevos proyectos</span>
                     </div>
 
-                    <h1 className="font-display font-bold text-5xl md:text-7xl lg:text-8xl leading-[0.9] tracking-tight mb-4 text-white">
-                        <div ref={title1Ref} className="overflow-hidden py-1">Desarrollo</div>
-                        <div ref={title2Ref} className="text-accent-coral overflow-hidden py-1">Frontend & UX</div>
+                    <h1 className="font-display font-bold text-5xl md:text-7xl lg:text-7xl xl:text-8xl leading-[0.9] tracking-tight mb-4 text-white">
+                        <div ref={title1Ref} className="overflow-hidden py-1">
+                            {mode === 'commercial' ? 'Experiencias digitales' : 'Desarrollo'}
+                        </div>
+                        <div ref={title2Ref} className="text-accent-coral overflow-hidden py-1 text-4xl md:text-6xl lg:text-7xl">
+                            {mode === 'commercial' ? 'listas para crecer' : 'Frontend & UX'}
+                        </div>
                     </h1>
 
                     <p ref={textRef} className="text-lg md:text-xl text-gray-400 mb-10 max-w-xl font-sans text-balance leading-relaxed">
-                        Soy Karlos Montoya, me especializo en combinar diseño, código y visión de producto para crear interfaces que no solo se ven bien, sino que comunican valor, resuelven problemas y elevan la experiencia del usuario.
+                        {mode === 'commercial'
+                            ? 'UX/UI, desarrollo Front-End, sitios web y productos digitales para negocios, instituciones y emprendedores.'
+                            : 'Soy Karlos Montoya, me especializo en combinar diseño, código y visión de producto para crear interfaces que no solo se ven bien, sino que comunican valor, resuelven problemas y elevan la experiencia del usuario.'
+                        }
                     </p>
 
                     <div ref={ctaRef} className="flex flex-wrap items-center gap-6">
-                        <a href="https://karlosmontoya91.github.io/Karlos_Montoya_CV/" target="_blank" rel="noopener noreferrer">
-                            <MagneticButton size="lg" variant="primary">
-                                Ver Portafolio
-                            </MagneticButton>
-                        </a>
-                        <div className="flex -space-x-3">
+                        {mode === 'commercial' ? (
+                            <>
+                                <div onClick={() => handleScrollTo('quote')}>
+                                    <MagneticButton size="lg" variant="primary">
+                                        Configura tu proyecto
+                                    </MagneticButton>
+                                </div>
+                                <div onClick={() => handleScrollTo('services')}>
+                                    <MagneticButton size="lg" variant="secondary">
+                                        Ver servicios
+                                    </MagneticButton>
+                                </div>
+                            </>
+                        ) : (
+                            <>
+                                <a href="https://karlosmontoya91.github.io/Karlos_Montoya_CV/" target="_blank" rel="noopener noreferrer">
+                                    <MagneticButton size="lg" variant="primary">
+                                        Descargar CV
+                                    </MagneticButton>
+                                </a>
+                                <div onClick={() => handleScrollTo('portfolio')}>
+                                    <MagneticButton size="lg" variant="secondary">
+                                        Ver proyectos
+                                    </MagneticButton>
+                                </div>
+                            </>
+                        )}
+
+                        <div className="flex -space-x-3 hidden sm:flex">
                             {[1, 2, 3].map((i) => (
                                 <div key={i} className="w-12 h-12 rounded-full border-2 border-dark bg-gray-800 flex items-center justify-center relative overflow-hidden">
                                     <img src={`https://i.pravatar.cc/100?img=${i + 10}`} alt="avatar" className="w-full h-full object-cover" />
@@ -85,7 +122,7 @@ export const HeroSection = () => {
                                 +10
                             </div>
                         </div>
-                        <span className="text-sm font-medium text-gray-400">
+                        <span className="text-sm font-medium text-gray-400 hidden sm:block">
                             Proyectos <br />Exitosos
                         </span>
                     </div>
